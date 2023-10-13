@@ -1,0 +1,9 @@
+.footer-menu {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 20px;
+  }
+}
+
+.footer-menu__element {
+  @include footer-padding;
+}

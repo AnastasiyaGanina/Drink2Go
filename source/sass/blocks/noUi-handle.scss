@@ -1,0 +1,77 @@
+.noUi-handle {
+  top: -11px;
+  right: -17px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $primary-lighter;
+  border-radius: 50%;
+  box-shadow: none;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.noUi-handle:hover,
+.noUi-handle:focus {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: $primary-opacity;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.noUi-handle:focus {
+  outline: none;
+}
+
+.noUi-handle:active {
+  border: 2px solid $base-primary;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: $base-primary;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.noUi-handle-lower {
+  right: -10px;
+}
+
+[disabled] .noUi-handle {
+  border-color: $base-grey;
+}
+
+[disabled] .noUi-handle:hover {
+  &::before {
+    display: none;
+  }
+}
+
+[disabled] .noUi-handle:focus {
+  &::before {
+    display: none;
+  }
+}
+
+[disabled] .noUi-handle:active {
+  &::before {
+    display: none;
+  }
+}

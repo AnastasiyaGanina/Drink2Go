@@ -1,0 +1,13 @@
+.title-h3 {
+  margin: 0;
+  color: $base-black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+}

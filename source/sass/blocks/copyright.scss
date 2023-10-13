@@ -1,0 +1,57 @@
+.copyright {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  column-gap: 4px;
+  color: $base-grey;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 16px;
+    mask-image: url("/images/icons/stack.svg#social_htmlacademy");
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    background-color: $base-grey;
+  }
+
+  &:hover {
+    color: $base-primary;
+  }
+
+  &:focus {
+    color: $base-primary;
+    outline: none;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}
+
+.copyright__link:hover::after {
+  background-color: $base-primary;
+}
+
+.copyright__link:active::after {
+  background-color: $primary-darker;
+}

@@ -1,0 +1,40 @@
+.slider-pagination {
+  @include list-reset;
+
+  position: absolute;
+  bottom: 66px;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%);
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 8px;
+  }
+}
+
+.slider-pagination__link {
+  width: 62px;
+  height: 4px;
+  border: none;
+  border-radius: unset;
+  background-color: $base-white;
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $primary-opacity;
+  }
+}
+
+.slider-pagination__item .slider-pagination__link {
+  cursor: pointer;
+}
+
+.slider-pagination__item--active .slider-pagination__link {
+  background-color: $base-primary;
+  cursor: auto;
+}

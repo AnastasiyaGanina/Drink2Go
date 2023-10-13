@@ -1,0 +1,21 @@
+.header__container {
+  @include flex;
+  min-height: 60px;
+  column-gap: 88px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 80px;
+    column-gap: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 158px;
+  }
+}
+
+.header__logo {
+  &::after {
+    padding-top: 2px;
+    padding-left: 18px;
+  }
+}

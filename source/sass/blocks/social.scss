@@ -1,0 +1,28 @@
+.social__link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+  }
+}
+
+.social__image {
+  color: $base-grey;
+}
+
+.social__link:hover .social__image,
+.social__link:focus .social__image {
+  color: $base-primary;
+}

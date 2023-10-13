@@ -1,0 +1,88 @@
+.header-nav {
+  @include flex;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+    min-height: 80px;
+  }
+}
+
+.header-nav__list {
+  @include flex;
+
+  @media (max-width: $mobile-width-only) {
+    order: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 16px; //Подгон
+  }
+}
+
+.header-nav__item {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+  }
+}
+
+.header-nav__link {
+  @include style-menu-link;
+
+  display: flex;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  align-items: center;
+  padding: 22px;
+}
+
+.header-nav__item--user .header-nav__link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  mask-image: url("/images/icons/stack.svg#user");
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  background-color: $base-black;
+}
+
+.header-nav__item--union .header-nav__link::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  mask-image: url("/images/icons/stack.svg#union");
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  background-color: $base-black;
+}
+
+.header-nav__item--user .header-nav__link::after {
+  @media (min-width: $desktop-width) {
+    @include nav-item-text;
+
+    content: "войти";
+    max-width: 60px;
+  }
+}
+
+.header-nav__item--union .header-nav__link::after {
+  @media (min-width: $desktop-width) {
+    @include nav-item-text;
+
+    content: "корзина";
+    max-width: 80px;
+  }
+}
+
+.header-nav__link:hover,
+.header-nav__link:focus,
+.header-nav__link:active {
+  &::before {
+    background-color: $base-primary;
+  }
+}

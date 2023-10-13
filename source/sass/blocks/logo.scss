@@ -1,0 +1,31 @@
+.logo {
+  display: flex;
+  text-align: center;
+  align-self: center;
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      content: "Интернет-магазин кофейных напитков";
+      max-width: 150px;
+      color: $base-black;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      text-transform: none;
+      text-align: start;
+      word-wrap: break-word;
+    }
+  }
+}
+
+.logo__image {
+  @media (min-width: $tablet-width) {
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    height: 36px;
+  }
+}

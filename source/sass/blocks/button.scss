@@ -1,0 +1,34 @@
+.button {
+  padding: 8px 20px;
+  color: $base-white;
+  border: none;
+  border-radius: 4px;
+  background-color: $base-primary;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  word-wrap: break-word;
+  cursor: pointer;
+
+  &:disabled {
+    color: $base-white;
+    background-color: $base-grey;
+  }
+
+  &:hover {
+    color: $base-white;
+    background-color: $primary-lighter;
+  }
+
+  &:focus {
+    color: $base-white;
+    background-color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $primary-darker;
+  }
+}

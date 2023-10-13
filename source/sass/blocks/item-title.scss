@@ -1,0 +1,15 @@
+.item-title {
+  margin: 0;
+  padding-bottom: 6px;
+  color: $base-primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.28px;
+  word-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 8px;
+  }
+}

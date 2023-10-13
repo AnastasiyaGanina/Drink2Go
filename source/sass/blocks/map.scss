@@ -1,0 +1,13 @@
+.map__image {
+  width: 100%;
+  min-width: 320px;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 540px;
+  }
+}
